@@ -1,0 +1,49 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+###
+GET http://localhost:8080/api/orders/ORD-2024-0001
+
+
+###
+POST http://localhost:8080/api/orders
+Content-Type: application/json
+
+{
+  "customerId": "CUST-002",
+  "customerName": "Benh Vien Da Khoa Trung Uong",
+  "orderDate": "2024-01-16",
+  "deliveryDate": "2024-01-20",
+  "paymentDate": "2024-02-15",
+  "paymentTerms": "Net 30",
+  "totalAmount": 25000000.00,
+  "discountAmount": 1250000.00,
+  "vatAmount": 2375000.00,
+  "totalPayment": 26125000.00,
+  "status": "DRAFT",
+  "orderDetails": [
+    {
+      "orderDetailId": "ORDDET-2024-001-1",
+      "productId": "MED-001",
+      "productName": "Paracetamol 500mg",
+      "batchNumber": "BATCH-2024-001",
+      "expiryDate": "2025-12-31",
+      "unit": "Box",
+      "quantity": 200.00,
+      "unitPriceWithVat": 50000.00,
+      "amount": 10000000.00,
+      "discountPercentage": 5.00,
+      "discountAmount": 500000.00,
+      "vatPercentage": 10.00,
+      "vatAmount": 950000.00,
+      "totalPayment": 10450000.00,
+      "employeeId": "EMP-001",
+      "employeeName": "Nguyen Van A",
+      "customerId": "CUST-001"
+    }
+  ]
+}
+
+###
+GET http://localhost:8080/api/orders
